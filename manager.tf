@@ -14,7 +14,6 @@ module "pve_ci_manager" {
 
   /* CI config */
   ci_conf_path     = var.ci_conf_path
-  ci_cdrom_storage = var.ci_cdrom_storage
 
   hostname    = "manager${each.key}.${var.swarm_name}"
   domain_name = var.domain_name

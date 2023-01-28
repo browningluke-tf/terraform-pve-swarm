@@ -75,12 +75,6 @@ variable "pubkey_path" {
   description = "value"
 }
 
-variable "ci_cdrom_storage" {
-  type        = string
-  default     = null
-  description = "value"
-}
-
 variable "ci_conf_path" {
   type        = string
   description = "value"
