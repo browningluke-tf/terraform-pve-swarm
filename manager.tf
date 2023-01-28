@@ -1,7 +1,3 @@
-locals {
-  manager_hostname_prefix = "${var.swarm_name}-manager"
-}
-
 module "pve_ci_manager" {
   source = "git@github.com:browningluke-tf/terraform-pve-ci-module.git?ref=main"
 
@@ -10,7 +6,7 @@ module "pve_ci_manager" {
     key => value
   }
 
-  name = "${local.manager_hostname_prefix}${each.key}"
+  name = "manager${each.key}.${var.swarm_name}"
   vmid = var.start_id + tonumber(each.key)
 
   target_node = var.pve_node
@@ -20,7 +16,7 @@ module "pve_ci_manager" {
   ci_conf_path     = var.ci_conf_path
   ci_cdrom_storage = var.ci_cdrom_storage
 
-  hostname    = "${local.manager_hostname_prefix}${each.key}"
+  hostname    = "manager${each.key}.${var.swarm_name}"
   domain_name = var.domain_name
 
   username         = var.username
