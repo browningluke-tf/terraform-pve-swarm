@@ -81,6 +81,11 @@ variable "ci_cdrom_storage" {
   description = "value"
 }
 
+variable "ci_conf_path" {
+  type        = string
+  description = "value"
+}
+
 /* Proxmox */
 variable "start_id" {
   type        = number

@@ -17,7 +17,7 @@ module "pve_ci_manager" {
   template    = var.node_template
 
   /* CI config */
-  ci_conf_path     = "${path.module}/cloud-init"
+  ci_conf_path     = var.ci_conf_path
   ci_cdrom_storage = var.ci_cdrom_storage
 
   hostname    = "${local.manager_hostname_prefix}${each.key}"
