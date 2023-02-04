@@ -1,3 +1,14 @@
+module "dhcp_reservation" {
+  source = "git@github.com:browningluke-homelab/dhcp-reservations.git//terraform"
+
+  for_each = {
+    for key, value in var.managers :
+    key => value
+  }
+  
+  hostname = "manager${each.key}.${var.swarm_name}"
+}
+
 module "pve_ci_manager" {
   source = "git@github.com:browningluke-tf/terraform-pve-ci-module.git?ref=main"
 
@@ -34,6 +45,7 @@ module "pve_ci_manager" {
       model    = "virtio"
       bridge   = var.net_bridge
       vlan_tag = var.vlan_tag
+      mac = module.dhcp_reservation[each.key].mac
     }
   ]
 
