@@ -13,15 +13,15 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_doppler"></a> [doppler](#provider\_doppler) | ~> 1.1.6 |
+| <a name="provider_doppler"></a> [doppler](#provider\_doppler) | 1.1.6 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_dhcp_reservation"></a> [dhcp\_reservation](#module\_dhcp\_reservation) | git@github.com:browningluke-homelab/dhcp-reservations.git//terraform | v1.0.0 |
-| <a name="module_pve_ci_manager"></a> [pve\_ci\_manager](#module\_pve\_ci\_manager) | git@github.com:browningluke-tf/terraform-pve-ci-module.git | v1.0.0 |
-| <a name="module_pve_ci_worker"></a> [pve\_ci\_worker](#module\_pve\_ci\_worker) | git@github.com:browningluke-tf/terraform-pve-ci-module.git | v1.0.0 |
+| <a name="module_pve_ci_manager"></a> [pve\_ci\_manager](#module\_pve\_ci\_manager) | git@github.com:browningluke-tf/terraform-pve-ci-module.git | v1.1.0 |
+| <a name="module_pve_ci_worker"></a> [pve\_ci\_worker](#module\_pve\_ci\_worker) | git@github.com:browningluke-tf/terraform-pve-ci-module.git | v1.1.0 |
 
 ## Resources
 
