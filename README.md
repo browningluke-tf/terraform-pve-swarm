@@ -42,7 +42,9 @@
 | <a name="input_node_template"></a> [node\_template](#input\_node\_template) | value | `string` | n/a | yes |
 | <a name="input_pubkey_path"></a> [pubkey\_path](#input\_pubkey\_path) | value | `string` | n/a | yes |
 | <a name="input_pve_host"></a> [pve\_host](#input\_pve\_host) | description | `string` | n/a | yes |
+| <a name="input_pve_https"></a> [pve\_https](#input\_pve\_https) | n/a | `bool` | `true` | no |
 | <a name="input_pve_node"></a> [pve\_node](#input\_pve\_node) | description | `string` | n/a | yes |
+| <a name="input_pve_port"></a> [pve\_port](#input\_pve\_port) | n/a | `string` | `"8006"` | no |
 | <a name="input_start_id"></a> [start\_id](#input\_start\_id) | value | `number` | n/a | yes |
 | <a name="input_swarm_name"></a> [swarm\_name](#input\_swarm\_name) | value | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `list(string)` | `[]` | no |
