@@ -39,6 +39,11 @@ variable "workers" {
   }))
 }
 
+variable "tags" {
+  type  = list(string)
+  default = []
+}
+
 /* Network */
 variable "vlan_tag" {
   type        = string
