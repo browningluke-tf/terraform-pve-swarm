@@ -105,3 +105,13 @@ variable "pve_host" {
   type        = string
   description = "description"
 }
+
+variable "pve_port" {
+  type    = string
+  default = "8006"
+}
+
+variable "pve_https" {
+  type    = bool
+  default = true
+}
