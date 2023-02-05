@@ -13,7 +13,7 @@ module "pve_ci_worker" {
   template    = var.node_template
 
   /* CI config */
-  ci_conf_path     = var.ci_conf_path
+  ci_conf_path = var.ci_conf_path
 
   hostname    = "worker${each.key}.${var.swarm_name}"
   domain_name = var.domain_name

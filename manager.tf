@@ -24,7 +24,7 @@ module "pve_ci_manager" {
   template    = var.node_template
 
   /* CI config */
-  ci_conf_path     = var.ci_conf_path
+  ci_conf_path = var.ci_conf_path
 
   hostname    = "manager${each.key}.${var.swarm_name}"
   domain_name = var.domain_name
@@ -45,7 +45,7 @@ module "pve_ci_manager" {
       model    = "virtio"
       bridge   = var.net_bridge
       vlan_tag = var.vlan_tag
-      mac = module.dhcp_reservation[each.key].mac
+      mac      = module.dhcp_reservation[each.key].mac
     }
   ]
 
