@@ -5,7 +5,7 @@ module "dhcp_reservation" {
     for key, value in var.managers :
     key => value
   }
-  
+
   hostname = "manager${each.key}.${var.swarm_name}"
 }
 
