@@ -1,5 +1,5 @@
 module "pve_ci_worker" {
-  source = "git@github.com:browningluke-tf/terraform-pve-ci-module.git?ref=main"
+  source = "git@github.com:browningluke-tf/terraform-pve-ci-module.git?ref=v1.0.0"
 
   for_each = {
     for key, value in var.workers :
@@ -13,7 +13,7 @@ module "pve_ci_worker" {
   template    = var.node_template
 
   /* CI config */
-  ci_conf_path     = var.ci_conf_path
+  ci_conf_path = var.ci_conf_path
 
   hostname    = "worker${each.key}.${var.swarm_name}"
   domain_name = var.domain_name
@@ -44,7 +44,7 @@ module "pve_ci_worker" {
       size    = each.value.disk_size
     }
   ]
-  
+
   tags = concat(var.tags, [
     "swarm", var.swarm_name
   ])
