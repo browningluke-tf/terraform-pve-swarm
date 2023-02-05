@@ -57,6 +57,10 @@ module "pve_ci_manager" {
     }
   ]
 
+  tags = concat(var.tags, [
+    "swarm", var.swarm_name
+  ])
+
   /* PVE connection details */
   pve_host     = var.pve_host
   pve_user     = data.doppler_secrets.pve.map.PVE_USER

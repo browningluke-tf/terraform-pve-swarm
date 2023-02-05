@@ -44,6 +44,10 @@ module "pve_ci_worker" {
       size    = each.value.disk_size
     }
   ]
+  
+  tags = concat(var.tags, [
+    "swarm", var.swarm_name
+  ])
 
   /* PVE connection details */
   pve_host     = var.pve_host
