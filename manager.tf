@@ -1,5 +1,5 @@
 module "dhcp_reservation" {
-  source = "git@github.com:browningluke-homelab/dhcp-reservations.git//terraform?ref=v1.0.0"
+  source = "github.com/browningluke-homelab/dhcp-reservations.git//terraform?ref=v1.0.0"
 
   for_each = {
     for key, value in var.managers :
