@@ -10,7 +10,8 @@ module "dhcp_reservation" {
 }
 
 module "pve_ci_manager" {
-  source = "git@github.com:browningluke-tf/terraform-pve-ci-module.git?ref=v1.1.0"
+  source  = "app.terraform.io/browningluke/cloud-init/pve"
+  version = "~> 1.1.0"
 
   for_each = {
     for key, value in var.managers :
