@@ -11,7 +11,7 @@ module "dhcp_reservation" {
 
 module "pve_ci_manager" {
   source  = "app.terraform.io/browningluke/cloud-init/pve"
-  version = "~> 1.1.0"
+  version = "~> 1.2.0"
 
   for_each = {
     for key, value in var.managers :
@@ -63,7 +63,7 @@ module "pve_ci_manager" {
   ])
 
   /* PVE connection details */
-  pve_host     = var.pve_host
-  pve_user     = data.doppler_secrets.pve.map.PVE_USER
-  pve_password = data.doppler_secrets.pve.map.PVE_PASS
+  pve_host        = var.pve_host
+  pve_user        = data.doppler_secrets.pve.map.PVE_USER
+  pve_private_key = data.doppler_secrets.pve.map.PVE_PRIVATE_KEY
 }
